@@ -51,19 +51,34 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="ORACLE简单命令笔记（ing）EXP命令：
+
+将数据库SampleDB完全导出,用户名system 密码manager 导出到E:/SampleDB.dmp中
+1exp system/manager@TestDB file=E:/sampleDB.dmp full=y
+
+将数据库中system用户与sys用户的表导出
+1exp system/manager@TestDB file=E:/sam">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://www.wangxuqiang.com/2015/12/29/hello-world/index.html">
+<meta property="og:title" content="Oracle简单命令使用">
+<meta property="og:url" content="http://www.wangxuqiang.com/2016/06/07/Oracle简单命令使用/index.html">
 <meta property="og:site_name" content="小强的BLOG">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2015-12-30T13:08:25.721Z">
+<meta property="og:description" content="ORACLE简单命令笔记（ing）EXP命令：
+
+将数据库SampleDB完全导出,用户名system 密码manager 导出到E:/SampleDB.dmp中
+1exp system/manager@TestDB file=E:/sampleDB.dmp full=y
+
+将数据库中system用户与sys用户的表导出
+1exp system/manager@TestDB file=E:/sam">
+<meta property="og:updated_time" content="2016-06-07T14:02:23.183Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="Oracle简单命令使用">
+<meta name="twitter:description" content="ORACLE简单命令笔记（ing）EXP命令：
+
+将数据库SampleDB完全导出,用户名system 密码manager 导出到E:/SampleDB.dmp中
+1exp system/manager@TestDB file=E:/sampleDB.dmp full=y
+
+将数据库中system用户与sys用户的表导出
+1exp system/manager@TestDB file=E:/sam">
 
 
 
@@ -77,7 +92,7 @@ Quick">
 
 </script>
 
-  <title> Hello World | 小强的BLOG </title>
+  <title> Oracle简单命令使用 | 小强的BLOG </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -227,7 +242,7 @@ Quick">
             
             
               
-                Hello World
+                Oracle简单命令使用
               
             
           </h1>
@@ -236,8 +251,8 @@ Quick">
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-29T20:59:02+08:00" content="2015-12-29">
-              2015-12-29
+            <time itemprop="dateCreated" datetime="2016-06-07T21:37:32+08:00" content="2016-06-07">
+              2016-06-07
             </time>
           </span>
 
@@ -246,8 +261,8 @@ Quick">
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/oracle/" itemprop="url" rel="index">
+                    <span itemprop="name">oracle</span>
                   </a>
                 </span>
 
@@ -262,8 +277,8 @@ Quick">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/29/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/29/hello-world/" itemprop="commentsCount"></span>
+                <a href="/2016/06/07/Oracle简单命令使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/07/Oracle简单命令使用/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -282,16 +297,62 @@ Quick">
       
 
       
-        <span itemprop="articleBody"><p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <span itemprop="articleBody"><h1 id="ORACLE_u7B80_u5355_u547D_u4EE4_u7B14_u8BB0_uFF08ing_uFF09"><a href="#ORACLE_u7B80_u5355_u547D_u4EE4_u7B14_u8BB0_uFF08ing_uFF09" class="headerlink" title="ORACLE简单命令笔记（ing）"></a>ORACLE简单命令笔记（ing）</h1><p>EXP命令：</p>
+<ol>
+<li><p>将数据库SampleDB完全导出,用户名system 密码manager 导出到E:/SampleDB.dmp中</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">exp</span> <span class="keyword">system</span>/manager<span class="variable">@TestDB</span> <span class="keyword">file</span>=E:/sampleDB.dmp full=y</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将数据库中system用户与sys用户的表导出</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">exp</span> <span class="keyword">system</span>/manager<span class="variable">@TestDB</span> <span class="keyword">file</span>=E:/sampleDB.dmp  owner=(<span class="keyword">system</span>,sys)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将数据库中的表 TableA,TableB 导出  <a id="more"></a></p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">exp</span> <span class="keyword">system</span>/manager<span class="variable">@TestDB</span>  <span class="keyword">file</span>=E:/sampleDB.dmp  tables=(TableA,TableB)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将数据库中的表tableA中的字段filed1 值为 “王五” 的数据导出</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">exp system/manager@TestDB  <span class="keyword">file</span>=<span class="keyword">E</span>:/sampleDB.dmp  tables=(tableA)  <span class="keyword">query</span>=\<span class="string">" where filed1='王五'\"</span></span><br><span class="line"></span><br><span class="line">exp username/password@ip:port/servername <span class="keyword">file</span>=F:/<span class="keyword">test</span>/<span class="keyword">test</span>.dmp tables=(TABLE1,TABLE2) <span class="keyword">query</span>=\<span class="string">"where ID='1'\"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>IMP命令：</p>
+<ol>
+<li><p>将备份数据库文件中的数据导入指定的数据库SampleDB 中,如果 SampleDB 已存在该表,则不再导入;</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imp system/manager@<span class="keyword">TEST</span>  <span class="keyword">file</span>=<span class="keyword">E</span>:/sampleDB.dmp  full=y  ignore=<span class="literal">y</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将d:/daochu.dmp中的表table1 导入</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imp system/manager<span class="variable">@TEST</span>  file=<span class="constant">E</span><span class="symbol">:/sampleDB</span>.dmp  tables=(table1)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入一个完整数据库</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imp <span class="keyword">system</span>/manager <span class="built_in">file</span>=bible_db <span class="built_in">log</span>=dible_db full=y ignore=y</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入一个或一组指定用户所属的全部表、索引和其他对象</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">imp <span class="keyword">system</span>/manager <span class="built_in">file</span>=seapark <span class="built_in">log</span>=seapark fromuser=seapark imp </span><br><span class="line"> <span class="keyword">system</span>/manager <span class="built_in">file</span>=seapark <span class="built_in">log</span>=seapark fromuser=(seapark,amy,amyc,harold)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将一个用户所属的数据导入另一个用户</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">imp <span class="keyword">system</span>/manager <span class="built_in">file</span>=tank <span class="built_in">log</span>=tank fromuser=seapark touser=seapark_copy</span><br><span class="line"> imp <span class="keyword">system</span>/manager <span class="built_in">file</span>=tank <span class="built_in">log</span>=tank fromuser=(seapark,amy)</span><br><span class="line"> touser=(seapark1, amy1)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入一个表</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imp <span class="keyword">system</span>/manager <span class="built_in">file</span>=tank <span class="built_in">log</span>=tank fromuser=seapark TABLES=(<span class="operator">a</span>,b)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>从多个文件导入</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">imp <span class="keyword">system</span>/manager <span class="built_in">file</span>=(paycheck_1,paycheck_2,paycheck_3,paycheck_4) </span><br><span class="line"><span class="built_in">log</span>=paycheck, filesize=<span class="number">1</span>G full=y</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用参数文件</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">imp <span class="keyword">system</span>/manager parfile=bible_tables.par</span><br><span class="line">bible_tables.par参数文件：</span><br><span class="line"> <span class="comment">#Import the sample tables used for the Oracle8i Database Administrator's </span></span><br><span class="line">Bible. fromuser=seapark touser=seapark_copy <span class="built_in">file</span>=seapark <span class="built_in">log</span>=seapark_import</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增量导入</p>
+ <figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imp <span class="keyword">system</span>./manager inctype= RECTORE FULL=Y  <span class="keyword">FILE</span>=A</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>不少情况下要先将表彻底删除，然后导入。<br><a href="http://blog.csdn.net/studyvcmfc/article/details/5679235" target="_blank" rel="external">参考资源</a></p>
+<p>SQLLOADER命令：</p>
+<pre><code>sqlldr username/password@ip:port/servername control=test.ctl data=test.txt skip=1 log=test.log bad=test-bad.txt discard=test-discard.log
+
+control:控制文件
+data:数据文件
+skip:跳过行数
+log:日志
+bad:错误信息
+discard:抛弃信息
+</code></pre><p>..<em>to be continued</em></p>
 </span>
       
     </div>
@@ -303,12 +364,16 @@ Quick">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/01/02/Activity-的几种启动模式/" rel="next" title="Activity 的几种启动模式">
+                <i class="fa fa-chevron-left"></i> Activity 的几种启动模式
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/30/WIN10 安装vpn client/" rel="prev" title="WIN10 安装vpn client">
-                WIN10 安装vpn client <i class="fa fa-chevron-right"></i>
+              <a href="/2016/06/07/Oracle分区笔记/" rel="prev" title="Oracle分区笔记">
+                Oracle分区笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -336,8 +401,8 @@ Quick">
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/29/hello-world/"
-           data-title="Hello World" data-url="http://www.wangxuqiang.com/2015/12/29/hello-world/">
+      <div class="ds-thread" data-thread-key="2016/06/07/Oracle简单命令使用/"
+           data-title="Oracle简单命令使用" data-url="http://www.wangxuqiang.com/2016/06/07/Oracle简单命令使用/">
       </div>
     
   </div>
@@ -444,7 +509,7 @@ Quick">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick_Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create_a_new_post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run_server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate_static_files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy_to_remote_sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ORACLE_u7B80_u5355_u547D_u4EE4_u7B14_u8BB0_uFF08ing_uFF09"><span class="nav-number">1.</span> <span class="nav-text">ORACLE简单命令笔记（ing）</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
