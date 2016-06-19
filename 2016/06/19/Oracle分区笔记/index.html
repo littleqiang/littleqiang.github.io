@@ -61,7 +61,7 @@
 <meta property="og:description" content="Oracle数据表分区笔记When to Partition a Table什么时候需要分区表，官网的2个建议如下：
 （1）Tables greater than 2GB should always be considered for partitioning.
 （2）Tables containing historical data, in which new data is added int">
-<meta property="og:updated_time" content="2016-06-19T08:32:10.207Z">
+<meta property="og:updated_time" content="2016-06-19T08:34:16.203Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle分区笔记">
 <meta name="twitter:description" content="Oracle数据表分区笔记When to Partition a Table什么时候需要分区表，官网的2个建议如下：
@@ -287,8 +287,7 @@
       
         <span itemprop="articleBody"><h1 id="Oracle_u6570_u636E_u8868_u5206_u533A_u7B14_u8BB0"><a href="#Oracle_u6570_u636E_u8868_u5206_u533A_u7B14_u8BB0" class="headerlink" title="Oracle数据表分区笔记"></a>Oracle数据表分区笔记</h1><p>When to Partition a Table什么时候需要分区表，官网的2个建议如下：</p>
 <p>（1）Tables greater than 2GB should always be considered for partitioning.</p>
-<p>（2）Tables containing historical data, in which new data is added into the newest partition. A typical example is a historical table where only the current month’s data is updatable and the other 11 months are read only.</p>
-<p>在oracle 10g中最多支持：1024k-1个分区：</p>
+<p>（2）Tables containing historical data, in which new data is added into the newest partition. A typical example is a historical table where only the current month’s data is updatable and the other 11 months are read only.<br><a id="more"></a><br>在oracle 10g中最多支持：1024k-1个分区：</p>
 <p>Tables can be partitioned into up to 1024K-1 separate partitions</p>
 <hr>
 <p>分区表和分区索引对于10g，基本上可以分为：</p>
