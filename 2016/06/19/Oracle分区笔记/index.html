@@ -61,7 +61,7 @@
 <meta property="og:description" content="Oracle数据表分区笔记When to Partition a Table什么时候需要分区表，官网的2个建议如下：
 （1）Tables greater than 2GB should always be considered for partitioning.
 （2）Tables containing historical data, in which new data is added int">
-<meta property="og:updated_time" content="2016-06-19T07:19:16.860Z">
+<meta property="og:updated_time" content="2016-06-19T08:32:10.207Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle分区笔记">
 <meta name="twitter:description" content="Oracle数据表分区笔记When to Partition a Table什么时候需要分区表，官网的2个建议如下：
@@ -290,7 +290,8 @@
 <p>（2）Tables containing historical data, in which new data is added into the newest partition. A typical example is a historical table where only the current month’s data is updatable and the other 11 months are read only.</p>
 <p>在oracle 10g中最多支持：1024k-1个分区：</p>
 <p>Tables can be partitioned into up to 1024K-1 separate partitions</p>
-<h2 id="3C_21-more-_3E"><a href="#3C_21-more-_3E" class="headerlink" title="<a id=" more"=""></a>"><!--more--></h2><p>分区表和分区索引对于10g，基本上可以分为：</p>
+<hr>
+<p>分区表和分区索引对于10g，基本上可以分为：</p>
 <pre><code>Range（范围）分区
 Hash（散列）分区
 List（列表）分区
@@ -539,7 +540,7 @@ partition part_03 values less than(maxvalue)
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle_u6570_u636E_u8868_u5206_u533A_u7B14_u8BB0"><span class="nav-number">1.</span> <span class="nav-text">Oracle数据表分区笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3C_21-more-_3E"><span class="nav-number">1.1.</span> <span class="nav-text">"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u521B_u5EFA_u5206_u533A"><span class="nav-number">1.2.</span> <span class="nav-text">创建分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5206_u533A_u7D22_u5F15_u76F8_u5173_uFF1A"><span class="nav-number">1.3.</span> <span class="nav-text">分区索引相关：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle_u6570_u636E_u8868_u5206_u533A_u7B14_u8BB0"><span class="nav-number">1.</span> <span class="nav-text">Oracle数据表分区笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u521B_u5EFA_u5206_u533A"><span class="nav-number">1.1.</span> <span class="nav-text">创建分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5206_u533A_u7D22_u5F15_u76F8_u5173_uFF1A"><span class="nav-number">1.2.</span> <span class="nav-text">分区索引相关：</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
