@@ -209,15 +209,235 @@
 
     
     
+
+    
       
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/22/Linux-crontab命令/" itemprop="url">
+                  Linux crontab命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-11-22T20:12:18+08:00" content="2016-11-22">
+              2016-11-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/22/Linux-crontab命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/22/Linux-crontab命令/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
       
-        
-        
-        
       
 
       
+        
+          <h1 id="Linux_crontab_u547D_u4EE4"><a href="#Linux_crontab_u547D_u4EE4" class="headerlink" title="Linux crontab命令"></a>Linux crontab命令</h1><p> crontab命令选项:</p>
+<pre><code>-u指定一个用户
+-l列出某个用户的任务计划
+-r删除某个用户的任务
+-e编辑某个用户的任务
+</code></pre><p> cron文件语法:</p>
+<pre><code> 分     小时    日       月       星期     命令
+ 0-59   0-23   1-31   1-12     0-6     command     (取值范围,0表示周日一般一行对应一个任务)
+记住几个特殊符号的含义:
+    “*”代表取值范围内的数字,
+    “/”代表”每”,
+    “-”代表从某个数字到某个数字,
+    “,”分开几个离散的数字
+</code></pre><p> 任务调度设置文件的写法
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/22/Linux-crontab命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/22/Tomcat日志拆分/" itemprop="url">
+                  Tomcat日志拆分
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-11-22T20:07:42+08:00" content="2016-11-22">
+              2016-11-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/tomcat/" itemprop="url" rel="index">
+                    <span itemprop="name">tomcat</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/22/Tomcat日志拆分/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/22/Tomcat日志拆分/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h1 id="tomcat_catalina-out_u65E5_u5FD7_u62C6_u5206"><a href="#tomcat_catalina-out_u65E5_u5FD7_u62C6_u5206" class="headerlink" title="tomcat catalina.out日志拆分"></a>tomcat catalina.out日志拆分</h1><h2 id="u521B_u5EFA_u811A_u672C_u65B9_u5F0F_uFF1A"><a href="#u521B_u5EFA_u811A_u672C_u65B9_u5F0F_uFF1A" class="headerlink" title="创建脚本方式："></a>创建脚本方式：</h2><p>创建sheel脚本</p>
+<pre><code>#!/bin/sh
+y=`date &quot;+%Y&quot;`
+m=`date &quot;+%m&quot;`
+d=`date &quot;+%d&quot;`
+cd /opt/apache-tomcat-6.0.39-1/logs
+cp catalina.out catalina.out.$y$m$d.log
+echo &gt; catalina.out
+exit
+</code></pre><p>linux系统创建定时任务触发脚本</p>
+<p>创建定时任务命令
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/22/Tomcat日志拆分/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -549,225 +769,12 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/07/用nexus本地搭建maven仓库/" itemprop="url">
-                  用nexus本地搭建maven仓库
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-06-07T22:24:00+08:00" content="2016-06-07">
-              2016-06-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/maven/" itemprop="url" rel="index">
-                    <span itemprop="name">maven</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/07/用nexus本地搭建maven仓库/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/07/用nexus本地搭建maven仓库/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h1 id="u7528nexus_u672C_u5730_u642D_u5EFAmaven_u4ED3_u5E93"><a href="#u7528nexus_u672C_u5730_u642D_u5EFAmaven_u4ED3_u5E93" class="headerlink" title="用nexus本地搭建maven仓库"></a>用nexus本地搭建maven仓库</h1><ol>
-<li>下载nexus-2.12.0-01-bundle.zip压缩包，解压安装。</li>
-<li>在命令行窗口，进入/nexus-2.12.0-01目录，输入<code>nexus</code>命令，出现如下(可以将nexus加入环境变量，方便使用)：<br><img src="http://i.imgur.com/T0NKA9P.png" alt=""><br>执行 <code>nexus install</code> 将Nexus安装为Windows服务。可将服务启动方式设为手动:<br><img src="http://i.imgur.com/p7prAiK.png" alt=""><br>以后通过 <code>nexus start</code> 即可启动Nexus ，通过 <code>nexus stop</code> 退出Nexus：<br><img src="http://i.imgur.com/lIxPIzX.png" alt=""></li>
-<li>在浏览器中访问<code>http://localhost:8081/nexus/</code><br><img src="http://i.imgur.com/Kxq2FhO.png" alt=""><br>右上角使用用户名：admin ，密码：admin123 登录。</li>
-<li><p>在本地搭建的maven仓库中添加jar包：</p>
-<p><code>mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.0.1.0 -Dpackaging=jar -Dfile=ojdbc14.jar</code></p>
-</li>
-</ol>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/07/maven-pom-xml详解/" itemprop="url">
-                  maven pom.xml详解
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-06-07T22:16:49+08:00" content="2016-06-07">
-              2016-06-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/maven/" itemprop="url" rel="index">
-                    <span itemprop="name">maven</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/07/maven-pom-xml详解/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/07/maven-pom-xml详解/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h1 id="maven_pom-xml_u8BE6_u89E3"><a href="#maven_pom-xml_u8BE6_u89E3" class="headerlink" title="maven pom.xml详解"></a>maven pom.xml详解</h1><p>pom文件内容<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/07/maven-pom-xml详解/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -808,14 +815,14 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
