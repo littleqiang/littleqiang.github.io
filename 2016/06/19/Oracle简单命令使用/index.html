@@ -51,28 +51,17 @@
 
 
 
-<meta name="description" content="ORACLE简单命令笔记（慢慢增加）EXP命令：
-
-将数据库SampleDB完全导出,用户名system 密码manager 导出到E:/SampleDB.dmp中exp system/manager@TestDB file=E:/sampleDB.dmp full=y
-
-将数据库中system用户与sys用户的表导出exp system/manager@TestDB file=E:/sample">
+<meta name="description" content="ORACLE简单命令笔记（慢慢增加）EXP命令：  将数据库SampleDB完全导出,用户名system 密码manager 导出到E:/SampleDB.dmp中exp system/manager@TestDB file=E:/sampleDB.dmp full=y  将数据库中system用户与sys用户的表导出exp system/manager@TestDB file=E:/sample">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oracle简单命令使用">
 <meta property="og:url" content="http://www.wangxuqiang.com/2016/06/19/Oracle简单命令使用/index.html">
 <meta property="og:site_name" content="小强的BLOG">
-<meta property="og:description" content="ORACLE简单命令笔记（慢慢增加）EXP命令：
-
-将数据库SampleDB完全导出,用户名system 密码manager 导出到E:/SampleDB.dmp中exp system/manager@TestDB file=E:/sampleDB.dmp full=y
-
-将数据库中system用户与sys用户的表导出exp system/manager@TestDB file=E:/sample">
-<meta property="og:updated_time" content="2016-06-19T08:30:50.671Z">
+<meta property="og:description" content="ORACLE简单命令笔记（慢慢增加）EXP命令：  将数据库SampleDB完全导出,用户名system 密码manager 导出到E:/SampleDB.dmp中exp system/manager@TestDB file=E:/sampleDB.dmp full=y  将数据库中system用户与sys用户的表导出exp system/manager@TestDB file=E:/sample">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-06-19T08:30:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle简单命令使用">
-<meta name="twitter:description" content="ORACLE简单命令笔记（慢慢增加）EXP命令：
-
-将数据库SampleDB完全导出,用户名system 密码manager 导出到E:/SampleDB.dmp中exp system/manager@TestDB file=E:/sampleDB.dmp full=y
-
-将数据库中system用户与sys用户的表导出exp system/manager@TestDB file=E:/sample">
+<meta name="twitter:description" content="ORACLE简单命令笔记（慢慢增加）EXP命令：  将数据库SampleDB完全导出,用户名system 密码manager 导出到E:/SampleDB.dmp中exp system/manager@TestDB file=E:/sampleDB.dmp full=y  将数据库中system用户与sys用户的表导出exp system/manager@TestDB file=E:/sample">
 
 
 
@@ -334,7 +323,7 @@ Bible. fromuser=seapark touser=seapark_copy file=seapark log=seapark_import</cod
 <ol>
 <li>增量导入<br><code>imp system./manager inctype= RECTORE FULL=Y  FILE=A</code></li>
 </ol>
-<p>不少情况下要先将表彻底删除，然后导入。<br><a href="http://blog.csdn.net/studyvcmfc/article/details/5679235" target="_blank" rel="external">参考资源</a></p>
+<p>不少情况下要先将表彻底删除，然后导入。<br><a href="http://blog.csdn.net/studyvcmfc/article/details/5679235" target="_blank" rel="noopener">参考资源</a></p>
 <p>SQLLOADER命令：</p>
 <pre><code>sqlldr username/password@ip:port/servername control=test.ctl data=test.txt skip=1 log=test.log bad=test-bad.txt discard=test-discard.log
 
@@ -612,7 +601,7 @@ TEMPLATE 调用 iAS 模式导出的模板名称
         <div class="copyright" >
   
   &copy;  2015 - 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>
